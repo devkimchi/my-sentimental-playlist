@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "Pick the primary sentiment from the user's input",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 800,
+      "temperature": 0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "The user's input",
+      "required": true
+    },
+    {
+      "name": "measured",
+      "description": "The user's sentiments measured with danceability and valence",
+      "required": true
+    }
+  ]
+}

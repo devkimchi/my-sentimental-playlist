@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "Measure the sentiment of the user's input to numbers between 0 and 1",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 800,
+      "temperature": 0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "The user's input",
+      "required": true
+    },
+    {
+      "name": "sentiments",
+      "description": "The user's sentiments",
+      "required": true
+    }
+  ]
+}
