@@ -1,0 +1,145 @@
+You have the list of JSON data containing the title, album, artist, danceability and valence of a song. The data is written in both Korean and English.
+
+Here are the definitions of danceability and valence:
+
+- danceability: describes how suitable for dancing. A value 0.00 is the least danceable and 1.00 is the most danceable.
+- valence: describes the musical positiveness. High valence (close to 1.00) sounds more positive and low valence (close to 0.00) sounds more negative.
+
+Based on user's input, Refine the output format that only contains title, artist, trackId and trackUri.
+
+Here are examples:
+---
+user:
+Based on the user's input, here are the songs with valence between 0.50 and 0.70:
+
+```json
+{
+  "tracks": [
+    {
+      "songId": null,
+      "rank": 6,
+      "rankStatus": "undefined",
+      "rankStatusValue": null,
+      "title": "Bubble Gum",
+      "artist": "NewJeans",
+      "album": "How Sweet",
+      "image": "https://i.scdn.co/image/ab67616d0000b273b657fbb27b17e7bd4691c2b2",
+      "trackId": "19D8LNpWwIPpi6hs9BG7dq",
+      "trackUri": "spotify:track:19D8LNpWwIPpi6hs9BG7dq",
+      "danceability": 0.758,
+      "valence": 0.529
+    },
+    {
+      "songId": null,
+      "rank": 7,
+      "rankStatus": "undefined",
+      "rankStatusValue": null,
+      "title": "Sticky",
+      "artist": "KISS OF LIFE",
+      "album": "Sticky",
+      "image": "https://i.scdn.co/image/ab67616d0000b2734cd7f69b85766b3d3035c27c",
+      "trackId": "4e1aewX6ATPcdfQIqr7gqO",
+      "trackUri": "spotify:track:4e1aewX6ATPcdfQIqr7gqO",
+      "danceability": 0.702,
+      "valence": 0.595
+    },
+    {
+      "songId": null,
+      "rank": 8,
+      "rankStatus": "undefined",
+      "rankStatusValue": null,
+      "title": "T.B.H",
+      "artist": "QWER",
+      "album": "1st Mini Album 'MANITO'",
+      "image": "https://i.scdn.co/image/ab67616d0000b2738a0ed896193a7c70ae17b30e",
+      "trackId": "39gaUtq2z4ejJbno7tWHbL",
+      "trackUri": "spotify:track:39gaUtq2z4ejJbno7tWHbL",
+      "danceability": 0.546,
+      "valence": 0.678
+    },
+    {
+      "songId": null,
+      "rank": 51,
+      "rankStatus": "undefined",
+      "rankStatusValue": null,
+      "title": "Girls Never Die",
+      "artist": "tripleS",
+      "album": "<ASSEMBLE24>",
+      "image": "https://i.scdn.co/image/ab67616d0000b2734b9eb26603f674ec91dcd545",
+      "trackId": "0Ol7uhYjodbXAKKarXdn6r",
+      "trackUri": "spotify:track:0Ol7uhYjodbXAKKarXdn6r",
+      "danceability": 0.667,
+      "valence": 0.675
+    },
+    {
+      "songId": null,
+      "rank": 78,
+      "rankStatus": "undefined",
+      "rankStatusValue": null,
+      "title": "EASY",
+      "artist": "LE SSERAFIM",
+      "album": "EASY",
+      "image": "https://i.scdn.co/image/ab67616d0000b273110f5426b8c149e80804912a",
+      "trackId": "2O4Bb2WCkjlTPO827OnBMI",
+      "trackUri": "spotify:track:2O4Bb2WCkjlTPO827OnBMI",
+      "danceability": 0.744,
+      "valence": 0.602
+    },
+    {
+      "songId": null,
+      "rank": 94,
+      "rankStatus": "undefined",
+      "rankStatusValue": null,
+      "title": "Smart",
+      "artist": "LE SSERAFIM",
+      "album": "EASY",
+      "image": "https://i.scdn.co/image/ab67616d0000b273110f5426b8c149e80804912a",
+      "trackId": "4lR8sYGMGZPvthF2yUfo7T",
+      "trackUri": "spotify:track:4lR8sYGMGZPvthF2yUfo7T",
+      "danceability": 0.799,
+      "valence": 0.594
+    }
+  ]
+}
+```
+
+These are the songs that meet the criteria of having a valence between 0.50 and 0.70.
+assistant:
+```json
+[
+  {"title": "Bubble Gum","artist": "NewJeans","trackId": "19D8LNpWwIPpi6hs9BG7dq","trackUri": "spotify:track:19D8LNpWwIPpi6hs9BG7dq"},
+  {"title": "Sticky","artist": "KISS OF LIFE","trackId": "4e1aewX6ATPcdfQIqr7gqO","trackUri": "spotify:track:4e1aewX6ATPcdfQIqr7gqO"},
+  {"title": "T.B.H","artist": "QWER","trackId": "39gaUtq2z4ejJbno7tWHbL","trackUri": "spotify:track:39gaUtq2z4ejJbno7tWHbL"},
+  {"title": "Girls Never Die","artist": "tripleS","trackId": "0Ol7uhYjodbXAKKarXdn6r","trackUri": "spotify:track:0Ol7uhYjodbXAKKarXdn6r"},
+  {"title": "EASY","artist": "LE SSERAFIM","trackId": "2O4Bb2WCkjlTPO827OnBMI","trackUri": "spotify:track:2O4Bb2WCkjlTPO827OnBMI"},
+  {"title": "Smart","artist": "LE SSERAFIM","trackId": "4lR8sYGMGZPvthF2yUfo7T","trackUri": "spotify:track:4lR8sYGMGZPvthF2yUfo7T"}
+]
+```
+
+user:
+{
+  "tracks": [
+    {"songId": null,"rank": 2,"rankStatus": "undefined","rankStatusValue": null,"title": "Small girl (feat. D.O.)","artist": "Lee Young Ji, D.O.","album": "16 Fantasy","image": "https://i.scdn.co/image/ab67616d0000b273aa8e7da62fbfae5cb65f8e55","trackId": "1AtFSBJibfaqfiOByQCwZ5","trackUri": "spotify:track:1AtFSBJibfaqfiOByQCwZ5","danceability": 0.77,"valence": 0.875},
+    {"songId": null,"rank": 3,"rankStatus": "undefined","rankStatusValue": null,"title": "How Sweet","artist": "NewJeans","album": "How Sweet","image": "https://i.scdn.co/image/ab67616d0000b273b657fbb27b17e7bd4691c2b2","trackId": "38tXZcL1gZRfbqfOG0VMTH","trackUri": "spotify:track:38tXZcL1gZRfbqfOG0VMTH","danceability": 0.803,"valence": 0.757},
+    {"songId": null,"rank": 5,"rankStatus": "undefined","rankStatusValue": null,"title": "Supernatural","artist": "NewJeans","album": "Supernatural","image": "https://i.scdn.co/image/ab67616d0000b2737e1eeb0d7cc374a168369c80","trackId": "5ocSQW5sIUIOFojwXEz9Ki","trackUri": "spotify:track:5ocSQW5sIUIOFojwXEz9Ki","danceability": 0.699,"valence": 0.863},
+    {"songId": null,"rank": 8,"rankStatus": "undefined","rankStatusValue": null,"title": "T.B.H","artist": "QWER","album": "1st Mini Album 'MANITO'","image": "https://i.scdn.co/image/ab67616d0000b2738a0ed896193a7c70ae17b30e","trackId": "39gaUtq2z4ejJbno7tWHbL","trackUri": "spotify:track:39gaUtq2z4ejJbno7tWHbL","danceability": 0.546,"valence": 0.678},
+    {"songId": null,"rank": 10,"rankStatus": "undefined","rankStatusValue": null,"title": "한 페이지가 될 수 있게","artist": "DAY6","album": "The Book of Us : Gravity","image": "https://i.scdn.co/image/ab67616d0000b27380c0a2d0bf89e3707b6365c4","trackId": "0EhdXt3y460mTRsi97Pyk5","trackUri": "spotify:track:0EhdXt3y460mTRsi97Pyk5","danceability": 0.51,"valence": 0.747}
+  ]
+}
+assistant:
+```json
+[
+  {"title": "Small girl (feat. D.O.)","artist": "Lee Young Ji, D.O.","trackId": "1AtFSBJibfaqfiOByQCwZ5","trackUri": "spotify:track:1AtFSBJibfaqfiOByQCwZ5"},
+  {"title": "How Sweet","artist": "NewJeans","trackId": "38tXZcL1gZRfbqfOG0VMTH","trackUri": "spotify:track:38tXZcL1gZRfbqfOG0VMTH"},
+  {"title": "Supernatural","artist": "NewJeans","trackId": "5ocSQW5sIUIOFojwXEz9Ki","trackUri": "spotify:track:5ocSQW5sIUIOFojwXEz9Ki"},
+  {"title": "T.B.H","artist": "QWER","trackId": "39gaUtq2z4ejJbno7tWHbL","trackUri": "spotify:track:39gaUtq2z4ejJbno7tWHbL"},
+  {"title": "한 페이지가 될 수 있게","artist": "DAY6","trackId": "0EhdXt3y460mTRsi97Pyk5","trackUri": "spotify:track:0EhdXt3y460mTRsi97Pyk5"}
+]
+```
+---
+
+Here's the inputs:
+---
+user:
+{{$input}}
+assistant:

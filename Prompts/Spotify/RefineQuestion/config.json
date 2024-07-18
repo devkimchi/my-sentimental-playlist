@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "type": "completion",
-  "description": "Refine the user's request based on the identified intent",
+  "description": "Refine the user's request based on the identified measurement",
   "execution_settings": {
     "default": {
       "max_tokens": 800,
@@ -15,8 +15,8 @@
       "required": true
     },
     {
-      "name": "intent",
-      "description": "The user's intent",
+      "name": "sentiment",
+      "description": "The user's measured sentiment in JSON format",
       "required": true
     }
   ]
