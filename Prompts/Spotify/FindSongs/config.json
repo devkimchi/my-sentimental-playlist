@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "type": "completion",
+  "description": "Find songs that match the user's sentiment",
+  "execution_settings": {
+    "default": {
+      "max_tokens": 4096,
+      "temperature": 0
+    }
+  },
+  "input_variables": [
+    {
+      "name": "input",
+      "description": "The result from the previous step in JSON format",
+      "required": true
+    },
+    {
+      "name": "tracks",
+      "description": "The list of tracks to search for",
+      "required": true
+    }
+  ]
+}

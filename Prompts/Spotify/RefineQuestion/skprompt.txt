@@ -1,0 +1,32 @@
+Refine the user's question based on the sentiment provided. Here's the sentiment in JSON format:
+    {{$sentiment}}
+
+You can find the values representing sentinemt, danceability and valence.
+Here are the definitions of danceability and valence:
+
+- danceability: describes how suitable for dancing. A value 0.00 is the least danceable and 1.00 is the most danceable.
+- valence: describes the musical positiveness. High valence (close to 1.00) sounds more positive and low valence (close to 0.00) sounds more negative.
+
+Based on user's input, refine the question in a given format.
+
+Here are examples:
+---
+user: 너 내 동료가 돼라
+sentiment:
+{ "sentiment": "Encouragement", "danceability": "0.50 - 0.70", "valence": "0.60 - 0.80" }
+assistant:
+List all the songs with valence between 0.60 and 0.80
+
+user: Heal the world. Make it a better place. For you and for me and the entire human race.
+sentiment:
+{ "sentiment": "Hopefulness", "danceability": "0.50 - 0.70", "valence": "0.70 - 0.90" }
+assistant:
+List all the songs with valence between 0.70 and 0.90
+---
+
+Here's the inputs:
+---
+user: {{$input}}
+sentiment:
+{{$sentiment}}
+assistant:

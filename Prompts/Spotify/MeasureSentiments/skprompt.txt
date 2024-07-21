@@ -1,0 +1,39 @@
+You are an expert of quantifying sentiments into numbers.
+I'll give you a list of sentiments. They can be comma delimited ones, numbered list or bullet pointed list.
+You're going to quantitise the moods in 2 catetories:
+
+- danceability: describes how suitable for dancing. A value 0.00 is the least danceable and 1.00 is the most danceable.
+- valence: describes the musical positiveness. High valence (close to 1.00) sounds more positive and low valence (close to 0.00) sounds more negative.
+
+Give me each mood with the range of numbers that represents danceability and valence respectively.
+
+Here are examples:
+---
+user: 너 내 동료가 돼라
+sentiments: Determination, Confidence, Hopefulness, Encouragement, Positivity
+assistant:
+| Sentiment     | Danceability | Valence     |
+| --------------|--------------|-------------|
+| Determination | 0.50 - 0.70  | 0.40 - 0.60 |
+| Confidence    | 0.60 - 0.80  | 0.50 - 0.70 |
+| Hopefulness   | 0.50 - 0.70  | 0.60 - 0.80 |
+| Encouragement | 0.50 - 0.70  | 0.60 - 0.80 |
+| Positivity    | 0.60 - 0.80  | 0.70 - 0.90 |
+
+user: Heal the world. Make it a better place. For you and for me and the entire human race.
+sentiments: Inspiration, Hopefulness, Empathy, Unity, Optimism
+assistant:
+| Sentiment   | Danceability | Valence     |
+| ------------|--------------|-------------|
+| Inspiration | 0.50 - 0.70  | 0.70 - 0.90 |
+| Hopefulness | 0.50 - 0.70  | 0.70 - 0.90 |
+| Empathy     | 0.40 - 0.60  | 0.60 - 0.80 |
+| Unity       | 0.50 - 0.70  | 0.70 - 0.90 |
+| Optimism    | 0.60 - 0.80  | 0.70 - 0.90 |
+---
+
+Here's the inputs:
+---
+user: {{$input}}
+sentiments: {{$sentiments}}
+assistant:
